@@ -6,8 +6,8 @@ In Odoo development, a developers sometimes needs debugging from source codes.
 The only source codes that should care are Odoo core itself, additional addons,
 and Enterprise source code if you are working with enterprise environment.
 
-Driven by purpose above, this dockerfile is created with mounted source codes style
-instead of copying sourcecode to docker image. Thats why this docker image is called `dev-mount`.
+> Driven by purpose above, this dockerfile is created with mounted source codes style
+> instead of copying source code to docker image. That's why this docker image is called `dev-mount`.
 
 ## What you need to do?
 ### Prepare your source codes and data_dir
