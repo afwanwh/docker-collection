@@ -3,7 +3,7 @@ Wordpress Docker Development Setup
 
 This docker-compose file contains 3 images:
 * Wordpress
-* phpmaydmin
+* phpmyadmin
 * MySQL
 
 ## How to run docker-compose file for the first time
