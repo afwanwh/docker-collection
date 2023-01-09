@@ -11,6 +11,8 @@ services:
       - db
     ports:
       - "8069:8069"
+    networks:
+      - odoo_network
   db:
     image: postgres:14
     ports:
@@ -19,3 +21,7 @@ services:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
+    networks:
+      - odoo_network
+networks:
+  odoo_network:
