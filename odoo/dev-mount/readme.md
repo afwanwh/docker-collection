@@ -59,14 +59,5 @@ docker run -d -v /folder/to/odoo:/opt/odoo-dir/odoo \
     -v /folder/to/data_dir:/opt/odoo-dir/data-dir \
     -v /folder/to/extra-addons:/opt/odoo-dir/extra-addons \
     -v /folder/to/config:/opt/odoo-dir/config \
-    -p 8069:8069 --name odoo13-ce-dev --link postgres12:db -t afwanwh/docker-collection:odoo13-ce-dev
-```
-- Enterprise Edition
-```
-docker run -d -v /folder/to/odoo:/opt/odoo-dir/odoo \
-    -v /folder/to/data_dir:/opt/odoo-dir/data-dir \
-    -v /folder/to/enterprise:/opt/odoo-dir/enterprise \
-    -v /folder/to/extra-addons:/opt/odoo-dir/extra-addons \
-    -v /folder/to/config:/opt/odoo-dir/config \
-    -p 8069:8069 --name odoo13-ee-dev --link postgres12:db -t afwanwh/docker-collection:odoo13-ee-dev
+    -p 8069:8069 --name odoo18-ce-dev --link postgres17:db -t afwanwh/odoo18-dev-community:latest
 ```
