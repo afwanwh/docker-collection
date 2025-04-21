@@ -1,0 +1,26 @@
+services:
+  web:
+    image: afwanwh/odoo18-dev-community:latest
+    volumes:
+      - ./data_dir:/opt/odoo-dir/data-dir
+      - ./odoo:/opt/odoo-dir/odoo
+      - ./extra-addons:/opt/odoo-dir/extra-addons
+      - ./config:/opt/odoo-dir/config
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    networks:
+      - odoo_network
+  db:
+    image: postgres:17
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+    networks:
+      - odoo_network
+networks:
+  odoo_network:
